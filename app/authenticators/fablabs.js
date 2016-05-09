@@ -57,7 +57,7 @@ export default Devise.extend({
             xhr.setRequestHeader('X-CSRF-TOKEN', $token)
           }
         };
-        $this.makeRequest(data).then(
+        $this.makeRequest(data, options).then(
           (response) => run(null, resolve, response),
           (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
         );
