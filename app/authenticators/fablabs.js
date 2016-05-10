@@ -54,13 +54,28 @@ export default Devise.extend({
         });
         var options = {
           beforeSend(xhr, settings) {
-            xhr.setRequestHeader('X-CSRF-TOKEN', $token)
+            xhr.setRequestHeader('X-CSRF-TOKEN', $token);
           }
         };
         $this.makeRequest(data, options).then(
           (response) => run(null, resolve, response),
           (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
-        );
+        ).then(function(){
+          var token = JSON.parse(localStorage.getItem('ember_simple_auth:session')).authenticated.session[1][1];
+          $.ajax({
+            type: "GET",
+            url: "/v0/me",
+            dataType: "json",
+            data: { access_token: token },
+            crossDomain: true,
+            xhrFields: {
+              withCredentials: true
+            },
+            success: function(response, status, xhr) {
+              console.log(response);
+            }
+          });
+        });
       });
 
     });
