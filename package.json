@@ -41,7 +41,6 @@
     "loader.js": "^4.0.1"
   },
   "dependencies": {
-    "express": "^4.13.4",
-    "rails-csrf": "^2.0.1"
+    "express": "^4.13.4"
   }
 }

@@ -1,5 +1,6 @@
-// app/session-stores/application.js
+import Ember from 'ember';
 import AdaptiveStore from 'ember-simple-auth/session-stores/adaptive';
+const { $ } = Ember;
 
 export default AdaptiveStore.extend({
   cookieName: 'XSRF-TOKEN'
