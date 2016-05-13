@@ -3,5 +3,5 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
 export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
   authorizer: 'authorizer:fablabs',
-  namespace:  'v0'
+  namespace:  'v1'
 });

@@ -1,0 +1,13 @@
+<h1>Labs</h1>
+
+
+{{#each model as |lab|}}
+<div>
+  {{lab.slug}}
+  {{#link-to 'labs.lab' lab.slug}}
+    {{lab.name}}
+  {{/link-to}}
+</div>
+{{/each}}
+
+{{outlet}}
