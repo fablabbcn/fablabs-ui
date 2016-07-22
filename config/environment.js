@@ -46,7 +46,8 @@ module.exports = function(environment) {
 
   ENV['ember-simple-auth'] = {
     routeAfterAuthentication: 'me',
-    routeIfAlreadyAuthenticated: 'me'
+    routeIfAlreadyAuthenticated: 'me',
+    authorizer: 'authorizer:fablabs',
   };
 
   if (environment === 'development') {

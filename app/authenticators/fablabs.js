@@ -4,19 +4,17 @@ import Devise from 'ember-simple-auth/authenticators/devise';
 const { RSVP: { Promise }, get, run, isEmpty, $ } = Ember;
 
 export default Devise.extend({
-  serverTokenEndpoint: 'http://api.fablabs.dev/sessions',
+  serverTokenEndpoint: 'http://api.fablabs.dev:8080/sessions',
+  crossOriginWhitelist: ['http://api.fablabs.dev:8080/'],
   identificationAttributeName: 'email_or_username',
   tokenAttributeName: 'token',
 
   makeGetRequest() {
     return $.ajax({
       type: "GET",
-      url: "/oauth/authorize?client_id=c0015d629941172c06cdfee6744b7dd173d5398e0ea0d48b7d9e557dd43a22fa&redirect_uri=http%3A%2F%2Ffablabs.dev%3A4200%2Fme&response_type=code",
+      url: "http://api.fablabs.dev:8080/oauth/authorize?client_id=c0015d629941172c06cdfee6744b7dd173d5398e0ea0d48b7d9e557dd43a22fa&redirect_uri=http%3A%2F%2Fweb.fablabs.dev%3A8080%2Fme&response_type=code",
       data: { },
       crossDomain: true,
-      xhrFields: {
-        withCredentials: true
-      }
     });
   },
 
@@ -43,32 +41,12 @@ export default Devise.extend({
       var $this = this;
       var $token = '';
 
-      return this.makeGetRequest(data).done(function() {
-        $.ajax({
-          type: "GET",
-          url: "/csrf",
-          data: { },
-          crossDomain: true,
-          xhrFields: {
-            withCredentials: true
-          }
-        }).then(function(response) {
-          $token = response['authenticity_token'];
-          $('meta[name="csrf-token"]').attr('content', $token);
-          $('input[type=hidden]').val($token);
-        });
+      this.makeGetRequest(data);
 
-        var options = {
-          beforeSend(xhr) {
-            xhr.setRequestHeader('X-CSRF-TOKEN', $token);
-          }
-        };
-
-        $this.makeRequest(data, options).then(
-          (response) => run(null, resolve, response),
-          (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
-        );
-      });
+      $this.makeRequest(data, {}).then(
+        (response) => run(null, resolve, response),
+        (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
+      );
 
     });
   }

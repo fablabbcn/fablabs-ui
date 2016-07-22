@@ -1,0 +1,47 @@
+<!-- Second Fixed NavBar -->
+<section id="second">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png">fablabs.io</a>
+      </div>
+      <div class="col-lg-4">
+        <form class="form">
+          <div class="form-group form-group-lg" style="display:inline;">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="material-icons">search</i></span>
+              <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
+            </div>
+          </div>
+       </form>
+   </div>
+
+      <div id="navbar" class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav">
+            <li class="active">
+              {{#link-to 'labs'}}Labs{{/link-to}}
+            </li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#users">Users</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#collabs">Collabs</a></li>
+            <li><a href="#machines">Machines</a></li>
+        </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <button type="button" class="btn btn-default navbar-btn">
+              {{#link-to 'login'}}Login{{/link-to}}
+            </button>
+            <button type="button" class="btn btn-primary navbar-btn">Register</button>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</section>
+{{yield}}

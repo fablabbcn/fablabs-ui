@@ -6,6 +6,6 @@ export default Model.extend({
     first_name:         attr('string'),
     last_name:          attr('string'),
     email:              attr('string'),
-    avatar:             attr('string'),
-    fab10_coupon_code:  attr('string'),
+    avatar_src:         attr('string'),
+    fab10_coupon_code:  attr('string')
 });

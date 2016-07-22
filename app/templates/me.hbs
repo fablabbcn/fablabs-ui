@@ -2,6 +2,9 @@
 
 <p>Hello {{ model.username }}</p>
 
+<label>Name:</label>
+ {{input type="text" value=username placeholder="Enter your name" action="updateFirstName"}}
+
 <p>Peter Parker is Spider-Man</p>
 
 <a href="#" {{action 'logout'}}>Logout</a>
