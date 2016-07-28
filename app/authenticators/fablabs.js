@@ -38,13 +38,14 @@ export default Devise.extend({
       data[identificationAttributeName] = identification;
       data['goto'] = "";
 
-      this.makeGetRequest(data);
+      var $this = this;
 
-      this.makeRequest(data, {}).then(
-        (response) => run(null, resolve, response),
-        (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
-      );
-
+      this.makeGetRequest(data).then(function(data) {
+        $this.makeRequest(data, {}).then(
+          (response) => run(null, resolve, response),
+          (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
+        );
+      });
     });
   }
 });
