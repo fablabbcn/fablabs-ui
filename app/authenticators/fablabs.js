@@ -38,12 +38,9 @@ export default Devise.extend({
       data[identificationAttributeName] = identification;
       data['goto'] = "";
 
-      var $this = this;
-      var $token = '';
-
       this.makeGetRequest(data);
 
-      $this.makeRequest(data, {}).then(
+      this.makeRequest(data, {}).then(
         (response) => run(null, resolve, response),
         (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
       );
