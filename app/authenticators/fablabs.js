@@ -11,7 +11,7 @@ export default Devise.extend({
   makeGetRequest() {
     return $.ajax({
       type: "GET",
-      url: "/api/oauth/authorize?client_id=c0015d629941172c06cdfee6744b7dd173d5398e0ea0d48b7d9e557dd43a22fa&redirect_uri=http%3A%2F%2Fweb.fablabs.dev%3A8080%2Fme&response_type=code",
+      url: "/oauth/authorize?client_id=c0015d629941172c06cdfee6744b7dd173d5398e0ea0d48b7d9e557dd43a22fa&redirect_uri=http%3A%2F%2Fweb.fablabs.dev%3A8080%2Fme&response_type=code",
       data: { },
       crossDomain: true,
     });
