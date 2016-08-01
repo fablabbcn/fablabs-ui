@@ -39,7 +39,7 @@ export default Devise.extend({
 
       var $this = this;
 
-      this.makeGetRequest(data).then(function(data) {
+      this.makeGetRequest().then(function() {
         $this.makeRequest(data, {}).then(
           (response) => run(null, resolve, response),
           (xhr) => run(null, reject, xhr.responseJSON || xhr.responseText)
