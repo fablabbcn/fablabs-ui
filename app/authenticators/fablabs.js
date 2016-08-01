@@ -4,7 +4,7 @@ import Devise from 'ember-simple-auth/authenticators/devise';
 const { RSVP: { Promise }, get, run, isEmpty, $ } = Ember;
 
 export default Devise.extend({
-  serverTokenEndpoint: '/api/sessions',
+  serverTokenEndpoint: '/sessions',
   identificationAttributeName: 'email_or_username',
   tokenAttributeName: 'token',
 
