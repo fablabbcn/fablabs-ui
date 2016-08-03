@@ -1,5 +1,726 @@
-<h2>This is a single lab</h2>
-<div>
-  {{ model.slug }} - {{ model.name }}
-</div>
+{{filter-bar}}
+<main role="main">
+  <div class="container  head">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="profile">
+          <img src="img/fablab_profile_pic.png" class="img-rounded"/>
+        </div>
+        <h1>{{ model.name }}</h1>
+        <p class="disabled">{{ model.lab_kind }}</p>
+      </div>
+      <div class="col-md-5">
+        <span class="pull-right">
+            <ul class="list-inline">
+              <li>
+                <button type="button" class="btn btn-default"><span><i class="material-icons">room</i></span>I've been here</button>
+              </li>
+              <li>
+                <button type="button" class="btn btn-action"><span><i class="material-icons">comment</i></span>Join the Community</button>
+              </li>
+            </ul>
+
+        </span>
+      </div>
+    </div>
+    <hr>
+
+    <article class="info">
+      <div class="row">
+        <div class="col-md-7">
+          <h3>About</h3>
+          <div class="description">
+            <p>{{ model.description }}</p>
+          </div>
+        </div>
+        <div class="col-md-5 info">
+          <span class="pull-right">
+            <ul class="list-inline">
+              <li>
+                <button type="button" class="special" href="#projects"><h1>16</h1><p>Projects</p>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="special" href="#users"><h1>178</h1><p>Users</p>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="special" href="#machines"><h1>21</h1><p>Events</p>
+                </button>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</main>
+
+<article class="detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h3>Lab Details</h3>
+        <div class="col-sm-4">
+          <span class="disabled"><i class="material-icons">build</i></span>
+          <h3>Capabilities</h3>
+          <ul>
+            <li><p>3D Printing</p></li>
+            <li><p>CNC Milling</p></li>
+            <li><p>Circuit Production</p></li>
+            <li><p>Laser Cutting</p></li>
+            <li><p>Laser Engraving</p></li>
+            <li><p>Precision Milling</p></li>
+            <li><p>Vynil Plotter</p></li>
+          </ul>
+          <a href="#machines"><p>View Machines →</p></a>
+        </div>
+        <div class="col-sm-4">
+          <span class="disabled"><i class="material-icons">schedule</i></span>
+          <h3>Opening Times</h3>
+          <ul>
+            <li><p>Mon <span>:</span> 9am <span> – </span> 7pm</p></li>
+            <li><p>Tue <span>:</span> 9am <span> – </span> 7pm</p></li>
+            <li><p>Wed <span>:</span> 9am <span> – </span> 7pm</p></li>
+            <li><p><span class="disabled">Thu </span>:<span> Closed</span></p></li>
+            <li><p>Fri <span>:</span> 9am <span> – </span> 7pm</p></li>
+            <li><p>Sat <span>:</span> 9am <span> – </span> 7pm</p></li>
+            <li><p><span class="disabled">Sun </span>:<span> Closed</span></p></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <span class="disabled"><i class="material-icons">room</i></span>
+          <h3>Contact</h3>
+          <ul>
+            <li><p>Carrer de Pujades, 102, Barcelona Catalonia 08005, Spain</p></li>
+            <li><p>+34 93 3209520</p></li>
+            <li><a href="mailto:info@fablabcn.org"><p>info@fablabbcn.org</p></a></li>
+            <ul class="list-inline">
+              <li><a href="#comment"><i class="material-icons">public</i></a></li>
+              <li><a href="#comment"><i class="material-icons">casino</i></a></li>
+              <li><a href="#comment"><i class="material-icons">wc</i></a></li>
+              <li><a href="#comment"><i class="material-icons">kitchen</i></a></li>
+              <li><a href="#comment"><i class="material-icons">pool</i></a></li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="location">Map
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="gallery">
+  <div class="col-lg-3">
+    <div class="hovereffect">
+      <img class="img-responsive" src="img/pic3.jpg" alt="">
+      <div class="overlay">
+         <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="hovereffect">
+      <img class="img-responsive" src="img/pic3.jpg" alt="">
+      <div class="overlay">
+         <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="hovereffect">
+      <img class="img-responsive" src="img/pic3.jpg" alt="">
+      <div class="overlay">
+         <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="hovereffect">
+      <img class="img-responsive" src="img/pic3.jpg" alt="">
+      <div class="overlay">
+         <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
+      </div>
+    </div>
+  </div>
+</article>
+<section id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2><span>16 </span>Projects</h2>
+      </div>
+      <div class="col-md-2">
+        <span class="pull-right">
+          <p><a href="#projects">View All Projects</a></p>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4 href="project.html">SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4>SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4>SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4>SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4>SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4>SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4>SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src="img/pic3.jpg" alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+        </div>
+
+          <div class="content">
+            <h4>SketchTune</h4>
+            <p class="disabled">March 22 2016</p>
+            <p>Tunes for your fingers</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+      </button>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>
+<section id="users">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <h2><span>178 </span>Users</h2>
+      </div>
+      <div class="col-sm-2">
+        <span class="pull-right">
+          <p><a href="#projects">View All Users</a></p>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded worker"/>
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded student" />
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded student" />
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded student" />
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded worker" />
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded student" />
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded worker" />
+
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded worker" />
+
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded student" />
+
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded student" />
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded student" />
+
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src="img/profile_pic.png" class="img-rounded worker" />
+
+          </div>
+          <div class="content">
+            <h5>Tomas Diez</h5>
+            <div class="disabled">Lab Director</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>
+<section id="machines">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2><span>17 </span>Machines</h2>
+      </div>
+      <div class="col-md-2">
+        <span class="pull-right">
+          <p><a href="#projects">View All Machines</a></p>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <button type="button" class="machine" href="#machines">
+          <a href="vinylcutter.html">Vinyl Cutter</a>
+          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
+          <p class="disabled">Roland</p>
+          <p class="disabled">GX-21</p>
+        </button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="machine" href="#machines">
+          <a href="vinylcutter.html">Vinyl Cutter</a>
+          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
+          <p class="disabled">Roland</p>
+          <p class="disabled">GX-21</p>
+        </button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="machine" href="#machines">
+          <a href="vinylcutter.html">Vinyl Cutter</a>
+          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
+          <p class="disabled">Roland</p>
+          <p class="disabled">GX-21</p>
+        </button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="machine" href="#machines">
+          <a href="vinylcutter.html">Vinyl Cutter</a>
+          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
+          <p class="disabled">Roland</p>
+          <p class="disabled">GX-21</p>
+        </button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="machine" href="#machines">
+          <a href="vinylcutter.html">Vinyl Cutter</a>
+          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
+          <p class="disabled">Roland</p>
+          <p class="disabled">GX-21</p>
+        </button>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="machine" href="#machines">
+          <a href="vinylcutter.html">Vinyl Cutter</a>
+          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
+          <p class="disabled">Roland</p>
+          <p class="disabled">GX-21</p>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="nearby">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>nearby labs</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <button type="button" href="index.html" class="">
+          <div class="profile">
+            <img src="img/fablab_profile_pic.png" class="img-rounded" />
+          </div>
+          <div class="content">
+            <p class="km">2km away</p>
+            <h5>MADE Markerpace BCN</h5>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">people</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">lightbulb_outline</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">event_note</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button type="button" href="index.html" class="">
+          <div class="profile">
+            <img src="img/fablab_profile_pic.png" class="img-rounded" />
+          </div>
+          <div class="content">
+            <p class="km">2km away</p>
+            <h5>MADE Markerpace BCN</h5>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">people</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">lightbulb_outline</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">event_note</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button type="button" href="index.html" class="">
+          <div class="profile">
+            <img src="img/fablab_profile_pic.png" class="img-rounded" />
+          </div>
+          <div class="content">
+            <p class="km">2km away</p>
+            <h5>MADE Markerpace BCN</h5>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">people</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">lightbulb_outline</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">event_note</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="newsletter">
+  <div class="container">
+    <div class="col-md-6">
+      <h2>The latest development, in your inbox</h2>
+      <p>Keep up to date with Fablabs.io announcements, events and developments.</p>
+    </div>
+    <div class="col-md-6">
+      <form class="form-inline">
+      <div class="form-group">
+          <div class="input-group">
+              <div class="input-group-addon"><i class="material-icons">email</i></div>
+              <input type="text" class="form-control" id="InputEmail" placeholder="Email Address">
+          </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    </div>
+  </div>
+</section>
 {{outlet}}

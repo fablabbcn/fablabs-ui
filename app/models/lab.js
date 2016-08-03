@@ -7,4 +7,8 @@ export default Model.extend({
     slug:               attr('string'),
     description:        attr('string'),
     email:              attr('string'),
+    kind:              attr('string'),
+    lab_kind: Ember.computed('kind', function() {
+      return `${this.get('kind').replace('_', '')}`;
+    }),
 });

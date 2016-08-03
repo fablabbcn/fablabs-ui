@@ -2,10 +2,11 @@
 @import 'bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
 /* COLORS */
+
 $green:             rgb(2, 164, 110);
 $dark:              rgb(26, 26, 26);
 $grey:              rgb(153, 153, 153);
-$green-dark:		    rgb(9, 119, 82);
+$green-dark:		rgb(9, 119, 82);
 
 $dark-bg:           rgb(27, 31, 32);
 $dark-bg-highlight: rgb(33, 37, 37);
@@ -13,12 +14,15 @@ $shadow-bg:         rgb(238, 238, 238);
 $alt-bg:            rgb(245, 245, 245);
 $white-bg:          rgb(255, 255, 255);
 
-$light-grey:	     	rgb(217, 217, 217);
+$light-grey:		rgb(217, 217, 217);
 
 
 $positive-act:      rgb(88, 149, 273);
 $warning-act:       rgb(254, 209, 70);
 $negative-act:      rgb(223, 104, 64);
+
+$orange:			#e8af05;
+
 
 .green {
   color: $green !important;
@@ -82,6 +86,7 @@ h2 {
   font-family: Apercu-Mono, Helvetica, sans-serif !important;
   font-weight: normal !important;
   font-size: 2.5rem !important;
+  padding-bottom: 1em !important;
 }
 
 h3 {
@@ -97,7 +102,7 @@ h3 {
 h4 {
   font-family: Apercu-Mono, Apercu-Regular, Helvetica, sans-serif !important;
   font-weight: normal !important;
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
 }
 
 p {
@@ -118,9 +123,26 @@ border-radius: $radius;
 .navbar-default { @include border-radius(0px); }
 .btn { @include border-radius(4px); }
 
-i { @include border-radius(50%); }
+i {@include border-radius(50%);}
+
+.img-rounded { @include border-radius(50%); width:70px; height:70px; }
+
+.activations {@include border-radius (4px)}
 
 
+/* img */
+
+img{
+	width: 100%;
+}
+
+.img-thumbnail {
+    padding: 0;
+    line-height: 0;
+    border: none;
+    border-radius:0;
+    width:100%;
+}
 
 /* STYLES */
 
@@ -138,8 +160,6 @@ body{
 	padding-right: 5%;
 	}
 }
-
-
 
 
 
@@ -173,6 +193,16 @@ body{
 
 #second {
 
+	.img-rounded{
+		width: 50px;
+		height: 50px;
+		padding: 0;
+	}
+	.btn{
+		padding: 10px 14px 8px 15px;
+		margin-top: 0;
+	}
+
 	.navbar-default {
 		background-color: $green;
 		margin: 0;
@@ -194,7 +224,9 @@ body{
 		&:hover {text-decoration:none; text-transform: none; box-shadow: none;};
 			img{
 				display: inline;
-				padding-right: 1em;
+				margin-right: 0.5em;
+        width: 42px;
+        height: 42px;
 			}
 	}
 	.col-lg-4 {
@@ -279,7 +311,7 @@ body{
 
 
 main {
-	padding-bottom: 4em;
+	padding-bottom: 0em;
 	.profile {
 		float: left;
 		display: inline-block;
@@ -290,16 +322,61 @@ main {
 		vertical-align: middle;
 	}
 	.head {
-		padding-top: 3em;
+		padding-top: 0em;
 		padding-bottom: 1em;
+
 			h1 {
 				margin-top: 0;
+				font-size: 1.8em !important;
+			}
+
+			h6{
+				color: $light-grey;
+				text-transform: uppercase;
+				padding-top: 2em;
+				text-align: right;
+				padding-right: 10px;
+
+							}
+
+			.row{
+				padding-top: 3em;
+			}
+			.btn-default {
+				border-color: $green;
+				background-color: transparent;
+				color: $green;
+				&:hover {background-color: $dark; border-color: $dark; color: white;};
+			}
+			.btn-action {
+				border-color: $green;
+				background-color: $green;
+				color: white;
+				&:hover {background-color: $dark; border-color: $dark; color: white;};
+			}
+			ul{
+				margin-bottom: 0em;
+			}
+
+			li{
+				margin-bottom: 0em;
+				text-align: right;
 			}
 	}
-	p{
-		font-size: 1.8rem!important;
-		line-height: 28px;
-	}
+		.description {
+			p{
+				font-size: 1.7rem !important;
+				line-height: 28px;
+			}
+		}
+		.disabled {
+			p{
+				padding-top: 0em;
+			}
+		}
+
+
+
 	.info{
 		margin-top: 3em;
 		.col-md-5 {
@@ -307,18 +384,102 @@ main {
 		}
 
 		li {
-			padding: 2% 0%;
-			width:122px;
-			text-align: center;
-			&:hover {background-color: $green; color: white};
-			a {
-				&:hover {color: white; text-decoration: none;};
-				p{
-				text-transform: uppercase;
-				}
+
+			.special{
+				padding: 2% 0%;
+				width:122px;
+				text-align: center;
+				background-color: transparent;
+				color: $green;
+				border: none;
+				padding-top:2em;
+				&:hover {background-color: $green; color: white};
+					&:hover {color: white; text-decoration: none;};
+					p{
+					text-transform: uppercase;
+					}
+
 			}
 		}
 	}
+}
+
+.activity{
+	background-color: $alt-bg;
+	height: auto;
+	padding: 2em;
+
+	hr{
+		padding-top: 0em;
+		padding-bottom: 0em;
+		margin-top: 1.3em;
+		margin-bottom: 1.3em;
+	}
+	h3{
+		padding-top: 0;
+		line-height: 0;
+		padding-bottom: 1em;
+		font-size: 1em !important;
+	}
+
+	p {
+		margin: 0;
+	}
+	.disabled {
+		text-transform: uppercase;
+		font-size: 12px !important;
+		letter-spacing: 1px;
+	}
+}
+
+.status{
+			padding-top: 2em;
+				ul{
+					margin: 0;
+				}
+
+			p{
+				color: $grey;
+				padding-top: 0.5em;
+				em{
+					font-style: normal;
+					color: $dark-bg;
+					padding-left: 5px;
+					padding-right: 3em;
+				}
+			}
+			span{
+			display: inline-block;
+						font-size: 16px;
+						text-decoration: none;
+						font-style: normal;
+						letter-spacing: 1;
+						vertical-align: middle;
+						line-height: 20em;
+						padding-bottom: 7px;
+						padding-right: 8px;
+
+				.material-icons {
+					font-size: 20px;
+					i{
+						padding-top: 5px;
+					}
+
+				}
+			}
+			img {
+				width:18px;
+				height: 18px;
+				margin-right: 5px;
+			}
+
+		}
+
+
+/* STEPS */
+
+#steps{
+	padding-top: 2em;
 }
 
 
@@ -376,6 +537,8 @@ main {
 
 
 .gallery{
+	margin-bottom: 0;
+	height: 280px;
 	.col-lg-3 {
 		margin: 0;
 		padding:0;
@@ -484,10 +647,14 @@ main {
 /* PROJECTS SECTION */
 
 #projects{
-	padding-top: 20em;
-	padding-bottom: 20em;
-	.container {
+
+	padding-top: 4em;
+	padding-bottom: 0em;
+
+	h3 {
+		margin: 0;
 	}
+
 
 	.project{
 		background-color: $alt-bg;
@@ -500,27 +667,72 @@ main {
 	}
 	.col-md-3{
 		padding: 0;
+		margin-bottom: 2em;
 	}
 	.content{
 		padding: 20px 20px 20px 20px;
 		height: 240px;
+		text-align: left;
 	}
 	ul{
 		position: absolute;
 	    bottom: 0;
+	    margin-bottom: 0;
+
+	    li{
+	    	width: 80px;
+	    	padding-left: 6%;
+	    }
+
+	    a {
+	    &:hover {color: $green-dark; text-decoration: none}
 		}
-	.material-icons {
-		font-size: 20px;
-		i{
-			padding-top: 5px;
+
+		span{
+			display: inline-block;
+						font-size: 16px;
+						text-decoration: none;
+						font-style: normal;
+						letter-spacing: 1;
+						vertical-align: middle;
+						line-height: 20em;
+						padding-bottom: 7px;
+						padding-right: 8px;
+
+			.material-icons {
+				font-size: 20px;
+				i{
+					padding-top: 5px;
+				}
+
+			}
 		}
 	}
+
+
 	.hovereffect {
 		.overlay {
 		height:30%;
 		bottom:0;
 		top: inherit;
 		}
+		i {
+    		padding-top: 5px;
+    	}
+    	h4{
+		color: $dark;
+		}
+		p{
+			color: $dark;
+		}
+		.disabled{
+			color: $grey;
+		}
+		&:hover {
+			h4, p {color: $green};
+			.disabled {color:$grey};
+		}
+
 	}
 	span.text-content {
 	  background: transparent;
@@ -531,7 +743,7 @@ main {
 	  left: 0;
 	  position: absolute;
 	  top: inherit;
-	  padding-top: 20px;
+	  padding-top: 15px;
 	  padding-left: 20px;
 	  &:hover {text-decoration:underline};
 	  ul{
@@ -547,20 +759,375 @@ main {
 	  vertical-align: middle;
 	  padding-left: 10px;
 	}
+	.img-rounded {
+		height: 30px;
+		width: 30px;
+	}
 }
 
+
+/* USERS */
+
+#users {
+	padding-top: 4em;
+	padding-bottom: 0em;
+		h3, h5 {
+			margin: 0px;
+	}
+	.row {
+		padding-bottom: 2em;
+	}
+
+	.col-sm-4 {
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+	button {
+		float: left;
+
+		.profile{
+			display: block;
+			float: left;
+			padding-right: 2em;
+			.worker {
+				border: 2px solid $green;
+			}
+			.student {
+				border: 2px solid $orange;
+			}
+
+		}
+		.content {
+			float: left;
+			display: inline-block;
+			h5 {
+				padding-top: 5px;
+				line-height: 20px;
+				color: $dark;
+			}
+		}
+		&:hover {
+			h5, a {
+				color: $green;
+			}
+
+			};
+
+	}
+}
+
+
+/* MACHINES */
+
+#machines {
+	.img-thumbnail {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		width:100px;
+		display: block;
+	}
+	.row{
+		padding-top:2em;
+	}
+	button {
+		&:hover {
+			a, p{
+				color:$green; text-decoration: underline;
+			};
+		}
+	}
+	p {
+		margin: 0;
+	}
+}
+
+
+/* LABS */
+
+#labs {
+	margin-top:0;
+	padding-top: 4em;
+	padding-bottom: 6em;
+
+	button {
+		float: left;
+
+		.profile{
+			display: block;
+			float: left;
+			padding-right: 2em;
+			.worker {
+				border: 2px solid $green;
+			}
+			.student {
+				border: 2px solid $orange;
+			}
+
+		}
+		.content {
+			float: left;
+			display: inline-block;
+			h5 {
+				padding-top: 5px;
+				line-height: 20px;
+				color: $dark;
+			}
+			p{
+				color: $green;
+				padding: 0;
+				margin: 0;
+			}
+			h5 {
+				margin: 0;
+			}
+
+			a{
+				text-decoration: none;
+				color: $grey;
+					span {padding: 5px;}
+				&:hover {color:$green;};
+			}
+			li{
+				padding-right: 5%;
+			}
+		}
+		&:hover {
+			h5, p{
+				color: $green;
+			}
+
+
+		}
+		.material-icons {
+			font-size:14px;
+		}
+
+	}
+}
+
+
+/* NEARBY */
+
+#nearby {
+	background-color: $alt-bg;
+	margin-top: 6em;
+	padding-top: 4em;
+	padding-bottom: 6em;
+
+	button {
+		float: left;
+
+		.profile{
+			display: block;
+			float: left;
+			padding-right: 2em;
+			.worker {
+				border: 2px solid $green;
+			}
+			.student {
+				border: 2px solid $orange;
+			}
+
+		}
+		.content {
+			float: left;
+			display: inline-block;
+			h5 {
+				padding-top: 5px;
+				line-height: 20px;
+				color: $dark;
+			}
+			p{
+				color: $green;
+				padding: 0;
+				margin: 0;
+			}
+			h5 {
+				margin: 0;
+			}
+
+			a{
+				text-decoration: none;
+				color: $grey;
+					span {padding: 5px;}
+				&:hover {color:$green;};
+			}
+			li{
+				padding-right: 5%;
+			}
+		}
+		&:hover {
+			h5, p{
+				color: $green;
+			}
+
+
+		}
+		.material-icons {
+			font-size:14px;
+		}
+
+	}
+}
+
+/* NEWSLETTER */
+
+#newsletter {
+	background-color: $dark-bg;
+	padding-top: 6em;
+	padding-bottom: 6em;
+
+	h2 {
+		color: white;
+		padding-bottom: 1em;
+	}
+	 p {
+	 	color: $light-grey;
+	 }
+
+	 form{
+	 	padding-top: 3em;
+	 	padding-left: 5%;
+	 	.form-group{
+	 		width:300px;
+	 		.input-group {
+	 			width:100%;
+
+	 			.input-group-addon {
+				    padding: 6px 4px;
+				    padding-right: 0;
+				    font-size: 8px;
+				    font-weight: 400;
+				    line-height: 1;
+				    color: $grey;
+				    text-align: center;
+				    background-color: white;
+				    border: 1px solid transparent;
+				    border-radius: 4px;
+				    border-top-right-radius: 0;
+				    border-bottom-right-radius: 0;
+				}
+				.form-control {
+				    width: 103%;
+				    height: 40px;
+				    padding: 6px 6px;
+				    background-color: #fff;
+				    border: 1px solid transparent;
+				    border-radius: 0px;
+				    margin: 0;
+				     border-top-right-radius: 4px;
+				    border-bottom-right-radius: 4px;
+				    /* box-shadow: inset 0 1px 1px rgba(0,0,0,.075); */
+				    /* transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; */
+				}
+	 			.form-control {
+	 				height:40px;
+
+	 			}
+	 			.material-icons {
+	 				line-height: 0;
+	 			}
+
+	 		}
+
+	 	}
+	 	.btn-primary {
+	 			background-color: $green;
+	 			color: white;
+	 			border-color: $green;
+				margin-top: 0;
+				height: 40px;
+				padding-left: 20px;
+				padding-right: 20px;
+
+	 		}
+	 }
+}
+
+
+footer{
+	background-color: $dark;
+	padding-top: 6em;
+	padding-bottom: 3em;
+
+	p {
+		text-align: left;
+		color: $grey;
+	}
+
+	hr{
+		border-top: 1px solid $dark-bg;
+	}
+
+	li{
+		padding: 1em;
+		margin:1em;
+		h5{
+			text-transform: uppercase;
+			a{
+				color: white;
+				&:hover {text-decoration:none;};
+			}
+		}
+
+		h4{
+			font-size: 12px !important;
+			text-transform: uppercase;
+			a {color: $grey;
+				&:hover {text-decoration:none;};
+			}
+		}
+	}
+}
+
+
+/* Line*/
+
+hr{
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
 
 /* BUTTONS */
 
+button{
+	padding: 0;
+	margin:0;
+	color: transparent;
+	border-radius: 0;
+	border: none;
+	background-color: transparent;
+	text-align: left;
+}
+
 a {
 	color: $green;
+	&:hover {color:$green;};
 }
+
+.navbar-btn {
+	margin-bottom: 0;
+}
+
 
 .btn {
 	text-transform: uppercase;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	letter-spacing: 2px;
+	padding-top: 4px;
+	padding-bottom: 0px;
+	letter-spacing: 1px;
+	padding-right: 1em;
+	&:active {box-shadow:none;}
+	&:focus {box-shadow:none; border:transparent;}
+	span {
+					display: inline-block;
+					font-size: 16px;
+					text-decoration: none;
+					font-style: normal;
+					letter-spacing: 1;
+					vertical-align: middle;
+					padding-bottom: 7px;
+					padding-right: 8px;
+				}
 }
 
 .btn-default {
@@ -586,41 +1153,127 @@ a {
 
 }
 
-	.disabled{
-		color: $grey;
+.btn-tag{
+
+	background-color: $alt-bg;
+	padding: 0.5em;
+	color: $green;
+	text-transform: lowercase;
+	margin-right: 0.5em;
+	padding-right: 0.8em;
+	padding-left: 0.8em;
+}
+
+
+.activations{
+	border: 2px solid $alt-bg;
+	padding: 2em;
+	margin-top: 0em;
+	margin-bottom: 2em;
+	background-color: $alt-bg;
+}
+
+.btn-interaction{
+	text-transform: none;
+	background-color: transparent;
+	color: $green;
+	border: 2px solid transparent;
+	padding-right: 0;
+	margin-bottom: 0px;
+
+
+	&:hover {background-color:white; color: $green; border: 2px solid $green};
+
+
+	span{
+
+	}
+		em{
+			text-transform: none;
+			font-style: normal;
+			padding: 12px 10px;
+			border: 2px solid $green;
+			border-radius: 4px;
+			background-color: $green;
+			color: white;
+			margin-left: 10px;
+		}
+}
+
+.btn-social{
+	text-transform: none;
+	vertical-align: bottom;
+	background-color: transparent;
+	color: $green-dark;
+	padding: 0;
+			margin-bottom: 10px;
+
+	img{
+		width: 26px;
+		height: 26px;
 	}
 
-/* MATERIAL ICONS */
 
-main{
+
+	span{
+
+	}
+	em{
+		text-transform: none;
+		font-style: normal;
+		padding: 12px 10px;
+		border: 2px solid $alt-bg;
+		border-radius: 4px;
+		background-color: $alt-bg;;
+		color: $green;
+		margin-left: 0px;
+
+
+		&:hover {background-color:$light-grey; border-color: $light-grey;};
+	}
+}
+
+	.disabled{
+		color: $grey;
+    text-transform:capitalize !important;
+	}
+
 
 .material-icons {
-  font-family: 'Material Icons';
-  color: $green;
-  border: 2px solid $green;
-  padding: 8px;
-  margin: 6px;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  &:hover {color:white; background-color: $green;}
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+	line-height: 30px;
 }
+
+/* MATERIAL ICONS */
+/* KEEPING ROUNDED ICONS STYLE */
+
+.interact {
+	.material-icons {
+	  font-family: 'Material Icons';
+	  color: $green;
+	  border: 2px solid $green;
+	  padding: 8px;
+	  margin: 6px;
+	  font-weight: normal;
+	  font-style: normal;
+	  font-size: 24px;  /* Preferred icon size */
+	  display: inline-block;
+	  line-height: 1;
+	  text-transform: none;
+	  letter-spacing: normal;
+	  word-wrap: normal;
+	  white-space: nowrap;
+	  direction: ltr;
+	  &:hover {color:white; background-color: $green;}
+
+	  /* Support for all WebKit browsers. */
+		-webkit-font-smoothing: antialiased;
+	  /* Support for Safari and Chrome. */
+	 	text-rendering: optimizeLegibility;
+
+	  /* Support for Firefox. */
+	  	-moz-osx-font-smoothing: grayscale;
+
+	  /* Support for IE. */
+	  	font-feature-settings: 'liga';
+	}
 }
