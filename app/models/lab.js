@@ -18,19 +18,19 @@ export default Model.extend({
     machines:           attr(),
 
     projects_count: Ember.computed('projects', function() {
-      return `${this.get('projects').length}`
+      return `${this.get('projects').length}`;
     }),
 
     users_count: Ember.computed('users', function() {
-      return `${this.get('users').length}`
+      return `${this.get('users').length}`;
     }),
 
     machines_count: Ember.computed('machines', function() {
-      return `${this.get('machines').length}`
+      return `${this.get('machines').length}`;
     }),
 
     lab_capabilities: Ember.computed('capabilities', function() {
-      return `${this.get('capabilities').map(function(x){ return x.replace(/_/g, ' ') } )}`.split(","); ;
+      return `${this.get('capabilities').map(function(x){ return x.replace(/_/g, ' ') } )}`.split(","); 
     }),
 
     lab_kind: Ember.computed('kind', function() {
