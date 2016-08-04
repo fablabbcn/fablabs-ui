@@ -1,0 +1,25 @@
+<section id="machines">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2><span>{{ lab.machines_count }} </span>Machines</h2>
+      </div>
+      <div class="col-md-2">
+        <span class="pull-right">
+          <p><a href="#projects">View All Machines</a></p>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      {{#each machines as |machine| }}
+      <div class="col-sm-2">
+        <button type="button" class="machine" href="#machines">
+          <a href="vinylcutter.html">{{ machine.name }}</a>
+          <img class="img-thumbnail" src={{ machine.photo }} />
+          <p class="disabled">{{ machine.brand.name }}</p>
+        </button>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
