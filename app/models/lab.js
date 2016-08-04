@@ -30,7 +30,7 @@ export default Model.extend({
     }),
 
     lab_capabilities: Ember.computed('capabilities', function() {
-      return `${this.get('capabilities').map(function(x){ return x.replace(/_/g, ' ') } )}`.split(","); 
+      return `${this.get('capabilities').map(function(x){ return x.replace(/_/g, ' '); } )}`.split(","); 
     }),
 
     lab_kind: Ember.computed('kind', function() {
