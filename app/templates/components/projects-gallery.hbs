@@ -1,0 +1,48 @@
+<section id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2><span>{{ lab.projects_count }} </span>Projects</h2>
+      </div>
+      <div class="col-md-2">
+        <span class="pull-right">
+          <p><a href="#projects">View All Projects</a></p>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+    {{#each projects as |project|}}
+      <div class="col-md-3 project">
+        <button type="button" href="project.html" class="hovereffect">
+          <div class="picture">
+            <div class="hovereffect">
+                <img class="img-thumbnail" src={{ project.cover }} alt="">
+                <div class="overlay">
+                   <a href="#profile"><span class="text-content"><img class="img-rounded" src="img/profile_mini.png"><span>Guillem Camprodon</span></span></a>
+                </div>
+            </div>
+          </div>
+
+          <div class="content">
+            <h4 class="spaced-bottom" href="project.html">{{ project.title }}</h4>
+            <p class="spaced-top disabled">{{ project.created_at }}</p>
+            <p>{{ project.description }}</p>
+            <ul class="list-inline">
+              <li>
+                <p><a href="#build"><span><i class="material-icons">build</i></span>24</a></p>
+              </li>
+              <li>
+                <p><a href="#people"><span><i class="material-icons">call_split</i></span>5</a></p>
+              </li>
+              <li>
+                <p><a href="#likes"><span><i class="material-icons">favorite</i></span>21</a></p>
+              </li>
+            </ul>
+          </div>
+        </button>
+      </div>
+    {{/each}}
+    </div>
+    <hr>
+  </div>
+</section>

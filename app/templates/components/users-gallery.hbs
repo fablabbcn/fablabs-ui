@@ -1,0 +1,31 @@
+<section id="users">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <h2><span>{{ lab.users_count }} </span>Users</h2>
+      </div>
+      <div class="col-sm-2">
+        <span class="pull-right">
+          <p><a href="#projects">View All Users</a></p>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      {{#each users as |user|}}
+      <div class="col-sm-4">
+        <button type="button" href="profile.html">
+          <div class="profile">
+            <img src={{ user.avatar }} class="img-rounded worker"/>
+          </div>
+          <div class="content">
+            <h5>{{ user.full_name }}</h5>
+            <div class="disabled">{{ user.title }}</div>
+            <a href="#profile">View Profile</a>
+          </div>
+        </button>
+      </div>
+      {{/each}}
+    </div>
+    <hr>
+  </div>
+</section>

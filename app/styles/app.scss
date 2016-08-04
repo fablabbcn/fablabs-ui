@@ -676,7 +676,7 @@ main {
 	}
 	ul{
 		position: absolute;
-	    bottom: 0;
+	    bottom: -10px;
 	    margin-bottom: 0;
 
 	    li{
@@ -687,7 +687,6 @@ main {
 	    a {
 	    &:hover {color: $green-dark; text-decoration: none}
 		}
-
 		span{
 			display: inline-block;
 						font-size: 16px;
@@ -765,6 +764,12 @@ main {
 	}
 }
 
+.spaced-bottom {
+  padding-bottom: 15px;
+}
+.spaced-top {
+  padding-top: 15px;
+}
 
 /* USERS */
 
@@ -1233,10 +1238,14 @@ a {
 	}
 }
 
-	.disabled{
-		color: $grey;
-    text-transform:capitalize !important;
-	}
+.disabled{
+	color: $grey;
+  text-transform:capitalize !important;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
 
 
 .material-icons {
