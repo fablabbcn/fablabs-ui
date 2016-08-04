@@ -1,10 +1,11 @@
-{{filter-bar}}
+{{#if model}}
+{{filter-bar name=model.name}}
 <main role="main">
   <div class="container  head">
     <div class="row">
       <div class="col-md-7">
         <div class="profile">
-          <img src="img/fablab_profile_pic.png" class="img-rounded"/>
+          <img src={{model.avatar}} class="img-rounded"/>
         </div>
         <h1>{{ model.name }}</h1>
         <p class="disabled">{{ model.lab_kind }}</p>
@@ -93,7 +94,7 @@
           <span class="disabled"><i class="material-icons">room</i></span>
           <h3>Contact</h3>
           <ul>
-            <li><p>Carrer de Pujades, 102, Barcelona Catalonia 08005, Spain</p></li>
+            <li><p>{{ model.location.address_1 }} {{ model.location.city }} {{ model.location.postal_code }}, {{ model.location.country.data.name }}</p></li>
             <li><p>+34 93 3209520</p></li>
             <li><a href="mailto:info@fablabcn.org"><p>info@fablabbcn.org</p></a></li>
             <ul class="list-inline">
@@ -107,8 +108,7 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div class="location">Map
-        </div>
+        {{ lab-map location=model.location}}
       </div>
     </div>
   </div>
@@ -723,4 +723,5 @@
     </div>
   </div>
 </section>
+{{/if}}
 {{outlet}}
