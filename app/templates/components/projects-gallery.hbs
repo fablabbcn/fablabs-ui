@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <h2><span>{{ lab.projects_count }} </span>Projects</h2>
+        <h2><span>{{ count }} </span>Projects</h2>
       </div>
       <div class="col-md-2">
         <span class="pull-right">
@@ -13,7 +13,7 @@
     <div class="row">
     {{#each projects as |project|}}
       <div class="col-md-3 project">
-        <button type="button" href="project.html" class="hovereffect">
+        <button type="button" href="{{ project.id }}" class="hovereffect">
           <div class="picture">
             <div class="hovereffect">
                 <img class="img-thumbnail" src={{ project.cover }} alt="">

@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         map.setView(this.get('center'), this.get('zoom'));
       }
 
-      map.addLayer(L.marker([location.latitude, location.longitude])).invalidateSize()
+      map.addLayer(L.marker([location.latitude, location.longitude])).invalidateSize();
 
       // Set
       this.set('map', map);
