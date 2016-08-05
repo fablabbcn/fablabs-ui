@@ -1,0 +1,39 @@
+<section id="labs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2><span>{{ count }} </span>Labs</h2>
+      </div>
+      <div class="col-md-2">
+        <span class="pull-right">
+          <p><a href="#projects"><!--View All Labs--></a></p>
+        </span>
+      </div>
+    </div>
+    {{#each labs as |lab| }}
+      <div class="row">
+        <div class="col-md-4">
+          <button type="button" href="index.html">
+            <div class="profile">
+              <img src={{ lab.avatar }} class="img-rounded" />
+            </div>
+            <div class="content">
+              <h5>{{ lab.name }}</h5>
+              <ul class="list-inline">
+                <li>
+                  <p><a href="#build"><span><i class="material-icons">people</i></span>24</a></p>
+                </li>
+                <li>
+                  <p><a href="#people"><span><i class="material-icons">lightbulb_outline</i></span>5</a></p>
+                </li>
+                <li>
+                  <p><a href="#likes"><span><i class="material-icons">event_note</i></span>21</a></p>
+                </li>
+              </ul>
+            </div>
+          </button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

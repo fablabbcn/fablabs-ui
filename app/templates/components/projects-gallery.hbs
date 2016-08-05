@@ -13,7 +13,7 @@
     <div class="row">
     {{#each projects as |project|}}
       <div class="col-md-3 project">
-        <button type="button" href="{{ project.id }}" class="hovereffect">
+        <a type="button" href="projects/{{ project.id }}" class="hovereffect">
           <div class="picture">
             <div class="hovereffect">
                 <img class="img-thumbnail" src={{ project.cover }} alt="">
@@ -39,7 +39,7 @@
               </li>
             </ul>
           </div>
-        </button>
+        </a>
       </div>
     {{/each}}
     </div>

@@ -101,183 +101,24 @@
   </div>
 </main>
 <article class="gallery">
-  <div class="col-lg-3">
-    <div class="hovereffect">
-      <img class="img-responsive" src="img/pic3.jpg" alt="">
-      <div class="overlay">
-        <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
+  {{#each model.documents as |document| }}
+    <div class="col-lg-3">
+      <div class="hovereffect">
+        <img class="img-responsive" src={{ document }} alt="">
+        <div class="overlay">
+          <a class="info" href="#"><i class="material-icons">camera</i>View Project Photos</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="hovereffect">
-      <img class="img-responsive" src="img/pic3.jpg" alt="">
-      <div class="overlay">
-        <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="hovereffect">
-      <img class="img-responsive" src="img/pic3.jpg" alt="">
-      <div class="overlay">
-        <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="hovereffect">
-      <img class="img-responsive" src="img/pic3.jpg" alt="">
-      <div class="overlay">
-        <a class="info" href="#"><i class="material-icons">camera</i>View Lab Photos</a>
-      </div>
-    </div>
-  </div>
+  {{/each}}
 </article>
-<section id="steps">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2>Steps</h2>
-      </div>
-    </div>
-    <hr>
-    <div class="step">
-      <div class="row">
-        <div class="col-md-7">
-          <h3>Step 1</h3>
-          <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.</p>
-          <div class="status">
-            <ul class="list-inline">
-              <li>
-                <p><span><i class="material-icons">attach_file</i></span><em><a href="index.html"><img src="img/github.png">Github</a>, <a href="index.html"><img src="img/googledrive.png">Google Drive</a>, <a href="google.com">http://anotherlink.com</a></em></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <img clas="img-thumbnail" href="#" src="img/pic2.jpg" />
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="step">
-      <div class="row">
-        <div class="col-md-7">
-          <h3>Step 2</h3>
-          <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.</p>
-          <div class="status">
-            <ul class="list-inline">
-              <li>
-                <p><span><i class="material-icons">attach_file</i></span><em><a href="index.html"><img src="img/github.png">Github</a>, <a href="index.html"><img src="img/googledrive.png">Google Drive</a>, <a href="google.com">http://anotherlink.com</a></em></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <img clas="img-thumbnail" href="#" src="img/pic2.jpg" />
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="step">
-      <div class="row">
-        <div class="col-md-7">
-          <h3>Step 3</h3>
-          <p>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.</p>
-          <div class="status">
-            <ul class="list-inline">
-              <li>
-                <p><span><i class="material-icons">attach_file</i></span><em><a href="index.html"><img src="img/github.png">Github</a>, <a href="index.html"><img src="img/googledrive.png">Google Drive</a>, <a href="google.com">http://anotherlink.com</a></em></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <img clas="img-thumbnail" href="#" src="img/pic2.jpg" />
-        </div>
-      </div>
-      <hr>
-    </div>
-  </div>
-</section>
-<section id="users">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10">
-        <h2><span>5 </span>Users</h2>
-      </div>
-      <div class="col-sm-2">
-        <span class="pull-right">
-          <p><a href="#projects"><!--View All Users--></a></p>
-        </span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <button type="button" href="profile.html">
-          <div class="profile">
-            <img src="img/profile_pic.png" class="img-rounded worker" />
-          </div>
-          <div class="content">
-            <h5>Tomas Diez</h5>
-            <div class="disabled">Lab Director</div>
-            <a href="#profile">View Profile</a>
-          </div>
-        </button>
-      </div>
-      <div class="col-sm-4">
-        <button type="button" href="profile.html">
-          <div class="profile">
-            <img src="img/profile_pic.png" class="img-rounded student" />
-          </div>
-          <div class="content">
-            <h5>Tomas Diez</h5>
-            <div class="disabled">Lab Director</div>
-              <a href="#profile">View Profile</a>
-            </div>
-        </button>
-      </div>
-      <div class="col-sm-4">
-        <button type="button" href="profile.html">
-          <div class="profile">
-            <img src="img/profile_pic.png" class="img-rounded student"/>
-          </div>
-          <div class="content">
-            <h5>Tomas Diez</h5>
-            <div class="disabled">Lab Director</div>
-            <a href="#profile">View Profile</a>
-          </div>
-        </button>
-      </div>
-      <div class="col-sm-4">
-        <button type="button" href="profile.html">
-          <div class="profile">
-            <img src="img/profile_pic.png" class="img-rounded student" />
-          </div>
-          <div class="content">
-            <h5>Tomas Diez</h5>
-            <div class="disabled">Lab Director</div>
-            <a href="#profile">View Profile</a>
-          </div>
-        </button>
-      </div>
-      <div class="col-sm-4">
-        <button type="button" href="profile.html">
-          <div class="profile">
-            <img src="img/profile_pic.png" class="img-rounded worker" />
-          </div>
-          <div class="content">
-            <h5>Tomas Diez</h5>
-            <div class="disabled">Lab Director</div>
-            <a href="#profile">View Profile</a>
-          </div>
-        </button>
-      </div>
-    </div>
-    <hr>
-  </div>
-</section>
+
+{{#if model.steps}}
+  {{steps-gallery steps=model.steps }}
+{{/if}}
+
+{{ users-gallery count="All" users=model.users }}
+
 <section id="machines">
   <div class="container">
     <div class="row">
@@ -319,41 +160,6 @@
     <hr>
   </div>
 </section>
-<section id="labs">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10">
-        <h2><span>2 </span>Labs</h2>
-      </div>
-      <div class="col-md-2">
-        <span class="pull-right">
-          <p><a href="#projects"><!--View All Labs--></a></p>
-        </span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <button type="button" href="index.html">
-          <div class="profile">
-            <img src="img/fablab_profile_pic.png" class="img-rounded" />
-          </div>
-          <div class="content">
-            <h5>Fablab BCN</h5>
-            <ul class="list-inline">
-              <li>
-                <p><a href="#build"><span><i class="material-icons">people</i></span>24</a></p>
-              </li>
-              <li>
-                <p><a href="#people"><span><i class="material-icons">lightbulb_outline</i></span>5</a></p>
-              </li>
-              <li>
-                <p><a href="#likes"><span><i class="material-icons">event_note</i></span>21</a></p>
-              </li>
-            </ul>
-          </div>
-        </button>
-      </div>
-
-    </div>
-  </div>
-</section>
+{{#if model.collaborations}}
+  {{labs-gallery count=model.labs_count labs=model.collaborations}}
+{{/if}}

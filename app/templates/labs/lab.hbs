@@ -143,11 +143,18 @@
     </div>
   </div>
 </article>
-{{ projects-gallery count=model.projects_count  projects=model.projects }}
+{{#if model.projects}}
+  {{ projects-gallery count=model.projects_count  projects=model.projects }}
+{{/if}}
 
-{{ users-gallery lab=model users=model.users }}
 
-{{ machines-gallery lab=model machines=model.machines }}
+{{#if model.users}}
+  {{ users-gallery count=model.users_count users=model.users }}
+{{/if}}
+
+{{#if model.machines}}
+  {{ machines-gallery count=model.machines_count machines=model.machines }}
+{{/if}}
 
 <section id="nearby">
   <div class="container">

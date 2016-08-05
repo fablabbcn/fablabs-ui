@@ -28,6 +28,17 @@ export default Model.extend({
     lookingfor:         attr('string'),
     cover:              attr('string'),
     documents:          attr(),
-    owner:              attr()
+    collaborations:     attr(),
+    steps:              attr(),
+    owner:              attr(),
+    users:              attr(),
+
+    labs_count: Ember.computed('collaborations', function() {
+      return `${this.get('collaborations').length}`;
+    }),
+
+    users_count: Ember.computed('users', function() {
+      return `${this.get('users').length}`;
+    }),
 
 });

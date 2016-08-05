@@ -1,0 +1,32 @@
+<section id="steps">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Steps</h2>
+      </div>
+    </div>
+    <hr>
+    {{#each steps as |step|}}
+      <div class="step">
+        <div class="row">
+          <div class="col-md-7">
+            <h3>Step {{ step.position }}</h3>
+            <h4>{{ step.title }}</h4>
+            <p>{{ step.description }}</p>
+            <div class="status">
+              <ul class="list-inline">
+                <li>
+                  <p><span><i class="material-icons">attach_file</i></span><em><a href="index.html"><img src="img/github.png">Github</a>, <a href="index.html"><img src="img/googledrive.png">Google Drive</a>, <a href="google.com">http://anotherlink.com</a></em></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img clas="img-thumbnail" href="#" src="img/pic2.jpg" />
+          </div>
+        </div>
+        <hr>
+      </div>
+    {{/each}}
+  </div>
+</section>
