@@ -839,6 +839,15 @@ main {
 		width:100px;
 		display: block;
 	}
+
+  .thumb-box {
+    height: 100%;
+    max-height: 150px;
+    min-height: 150px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+  }
+
 	.row{
 		padding-top:2em;
 	}
