@@ -12,7 +12,7 @@
           <div class="col-md-7">
             <h3>Step {{ step.position }}</h3>
             <h4>{{ step.title }}</h4>
-            <p>{{ step.description }}</p>
+            <p>{{ markdown-to-html step.description }}</p>
             <div class="status">
               <ul class="list-inline">
                 <li>
