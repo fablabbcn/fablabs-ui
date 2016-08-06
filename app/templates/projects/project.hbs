@@ -73,10 +73,12 @@
     <article class="info">
       <div class="row">
         <div class="col-md-7">
-          <h3>About</h3>
-          <div class="description">
-            <p>{{ model.scope }}</p>
-          </div>
+          {{#if model.scope }}
+            <h3>About</h3>
+            <div class="description">
+              <p>{{ model.scope }}</p>
+            </div>
+          {{/if}}
         </div>
         <div class="col-md-5 info">
           <span class="pull-right">
@@ -100,18 +102,9 @@
     </article>
   </div>
 </main>
-<article class="gallery">
-  {{#each model.documents as |document| }}
-    <div class="col-lg-3">
-      <div class="hovereffect">
-        <img class="img-responsive" src={{ document }} alt="">
-        <div class="overlay">
-          <a class="info" href="#"><i class="material-icons">camera</i>View Project Photos</a>
-        </div>
-      </div>
-    </div>
-  {{/each}}
-</article>
+{{#if model.documents }}
+  {{documents-gallery documents=model.documents}}
+{{/if}}
 
 {{#if model.steps}}
   {{steps-gallery steps=model.steps }}
@@ -119,47 +112,10 @@
 
 {{ users-gallery count="All" users=model.users }}
 
-<section id="machines">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10">
-        <h2><span>3 </span>Machines</h2>
-      </div>
-      <div class="col-md-2">
-        <span class="pull-right">
-          <p><a href="#projects"><!--View All Machines--></a></p>
-        </span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-2">
-        <button type="button" class="machine" href="#machines">
-          <a href="vinylcutter.html">Vinyl Cutter</a>
-          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
-          <p class="disabled">Roland</p>
-          <p class="disabled">GX-21</p>
-        </button>
-      </div>
-      <div class="col-sm-2">
-        <button type="button" class="machine" href="#machines">
-          <a href="vinylcutter.html">Vinyl Cutter</a>
-          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
-          <p class="disabled">Roland</p>
-          <p class="disabled">GX-21</p>
-        </button>
-      </div>
-      <div class="col-sm-2">
-        <button type="button" class="machine" href="#machines">
-          <a href="vinylcutter.html">Vinyl Cutter</a>
-          <img class="img-thumbnail" src="img/fablabsio-image.jpg" />
-          <p class="disabled">Roland</p>
-          <p class="disabled">GX-21</p>
-        </button>
-      </div>
-    </div>
-    <hr>
-  </div>
-</section>
+{{#if model.machines}}
+  {{machines-gallery steps=model.machines }}
+{{/if}}
+
 {{#if model.collaborations}}
   {{labs-gallery count=model.labs_count labs=model.collaborations}}
 {{/if}}
