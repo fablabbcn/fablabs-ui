@@ -5,7 +5,7 @@
       <div class="col-md-6">
         <h1>{{ model.title }}</h1>
         <div class="disabled">
-          <p>{{ model.description }}
+          <p>{{ markdown-to-html model.description }}
           </p>
         </div>
         <div class="status">
@@ -76,7 +76,10 @@
           {{#if model.scope }}
             <h3>About</h3>
             <div class="description">
-              <p>{{ model.scope }}</p>
+              <p>{{ markdown-to-html model.scope }}</p>
+              {{#if model.faq }}
+                <p>{{ markdown-to-html model.scope }}</p>
+              {{/if}}
             </div>
           {{/if}}
         </div>
