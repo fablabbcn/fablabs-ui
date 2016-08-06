@@ -78,7 +78,8 @@
             <div class="description">
               <p>{{ markdown-to-html model.scope }}</p>
               {{#if model.faq }}
-                <p>{{ markdown-to-html model.scope }}</p>
+                <h4>FAQ</h4>
+                <p>{{ markdown-to-html model.faq }}</p>
               {{/if}}
             </div>
           {{/if}}
