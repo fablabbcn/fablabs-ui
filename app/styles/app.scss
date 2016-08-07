@@ -342,6 +342,8 @@ main {
 			.row{
 				padding-top: 3em;
 			}
+		
+
 			.btn-default {
 				border-color: $green;
 				background-color: transparent;
@@ -361,6 +363,8 @@ main {
 			li{
 				margin-bottom: 0em;
 				text-align: right;
+				margin:0;
+				padding:0;
 			}
 	}
 		.description {
@@ -400,6 +404,16 @@ main {
 					}
 
 			}
+		}
+	}
+
+	.material-icons {
+		lineheight: 0;
+	}
+
+	.btn{
+		span{
+			line-height:0;
 		}
 	}
 }
@@ -455,7 +469,7 @@ main {
 						font-style: normal;
 						letter-spacing: 1;
 						vertical-align: middle;
-						line-height: 20em;
+						line-height: 0em;
 						padding-bottom: 7px;
 						padding-right: 8px;
 
@@ -1173,8 +1187,8 @@ a {
 .btn {
 	text-transform: uppercase;
 	padding-top: 4px;
-	padding-bottom: 0px;
-	letter-spacing: 1px;
+	padding-top: 6px;
+    padding-bottom: 3px;
 	padding-right: 1em;
 	&:active {box-shadow:none;}
 	&:focus {box-shadow:none; border:transparent;}
@@ -1242,7 +1256,7 @@ a {
 	margin-bottom: 0px;
 
 
-	&:hover {background-color:white; color: $green; border: 2px solid $green};
+	&:hover {background-color:white; color: $green; border: none; margin: 0px};
 
 
 	span{
@@ -1251,8 +1265,8 @@ a {
 		em{
 			text-transform: none;
 			font-style: normal;
-			padding: 12px 10px;
-			border: 2px solid $green;
+			padding: 12px 15px;
+			border: none;
 			border-radius: 4px;
 			background-color: $green;
 			color: white;
@@ -1341,3 +1355,5 @@ a {
 	  	font-feature-settings: 'liga';
 	}
 }
+
+
