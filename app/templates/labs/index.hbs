@@ -1,13 +1,24 @@
-<h1>Labs</h1>
-
-
 {{#each model as |lab|}}
-<div>
-  {{lab.slug}}
-  {{#link-to 'labs.lab' lab.slug}}
-    {{lab.name}}
-  {{/link-to}}
-</div>
+  <div class="lab-panel">
+    <div class="profile">
+      <img src={{ lab.avatar }} class="img-rounded" />
+    </div>
+    <div class="lab-box">
+      <div class="info">
+        <h4>
+          {{#link-to 'labs.lab' lab.slug}}
+            {{lab.name}}
+          {{/link-to}}
+        </h4>
+        <p class="disabled">{{ lab.lab_kind }}</p>
+      </div>
+      <div class="contacts">
+        <p>{{ lab.location.address_1 }} {{ lab.location.city }} {{ lab.location.postal_code }}, {{ lab.location.country.data.name }}</p>
+        <p>{{ lab.contacts.phone }}</p>
+        <div><a href="mailto:{{ model.contacts.email }}"><p>{{ lab.contacts.email }}</p></a></div>
+      </div>
+    </div>
+  </div>
 {{/each}}
 
 {{outlet}}

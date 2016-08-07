@@ -937,6 +937,34 @@ main {
 	}
 }
 
+.lab-panel {
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  .profile {
+    width: 15%;
+    display: inline-block;
+    float: left;
+  }
+  .lab-box {
+    width: 85%;
+    display: inline-block;
+    float: left;
+    .info {
+      padding: 10px;
+      display: inline-block;
+      float: left;
+      width: 30%;
+    }
+    .contacts {
+      padding: 10px;
+      display: inline-block;
+      float: left;
+      width: 70%
+    }
+  }
+}
 
 /* NEARBY */
 
