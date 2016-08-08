@@ -342,7 +342,7 @@ main {
 			.row{
 				padding-top: 3em;
 			}
-		
+
 
 			.btn-default {
 				border-color: $green;
@@ -742,7 +742,23 @@ main {
 			}
 		}
 	}
+  .project-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    line-height: 1em;        /* fallback */
+    max-height: 1.3em*1;       /* fallback */
+  }
 
+  .project-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-height: 1em;        /* fallback */
+    max-height: 1.05em*3;       /* fallback */
+  }
 
 	.hovereffect {
 		.overlay {
@@ -1364,5 +1380,3 @@ a {
 	  	font-feature-settings: 'liga';
 	}
 }
-
-
