@@ -35,13 +35,13 @@
               <p>
                 <span><i class="material-icons">local_offer</i></span>
                 <em>
-                  {{#if model.tags }}
-                    {{#each model.tags as |tag| }}
+                  {{#each model.tags as |tag| }}
+                    {{#if tag }}
                       <a class="btn btn-tag" href="index.html">{{ tag.name }}</a>
-                    {{/each}}
-                  {{else}}
-                    <a class="btn btn-tag" href="index.html">Untagged</a>
-                  {{/if}}
+                    {{else}}
+                      <a class="btn btn-tag" href="index.html">Untagged</a>
+                    {{/if}}
+                  {{/each}}
                 </em>
               </p>
             </li>
