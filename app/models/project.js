@@ -45,4 +45,9 @@ export default Model.extend({
     steps_count: Ember.computed('steps', function() {
       return `${this.get('steps').length}`;
     }),
+
+    machines_count: Ember.computed('steps', function() {
+      return `2`;
+    }),
+
 });

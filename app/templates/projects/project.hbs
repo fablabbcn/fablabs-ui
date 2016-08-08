@@ -14,27 +14,29 @@
               <p><span><i class="material-icons">loop</i></span>Project Status:<em>In Progress</em></p>
             </li>
             <li>
-              <p><span><i class="material-icons">event</i></span>Last Update:<em>June 28th 2016</em></p>
+              <p><span><i class="material-icons">event</i></span>Last Update:<em>{{ model.updated_at }}</em></p>
             </li>
           </ul>
-          <ul class="list-inline">
-            <li>
-              <p><span><i class="material-icons">room</i></span>
-                <em>
-                  {{#each model.collaborations as |collab| }}
-                    <a href="/labs/{{ collab.slug }}"> {{ collab.name }}</a>,
-                  {{/each}}
-                </em>
-              </p>
-            </li>
-          </ul>
+          {{#if model.collaborations}}
+            <ul class="list-inline">
+              <li>
+                <p><span><i class="material-icons">room</i></span>
+                  <em>
+                    {{#each model.collaborations as |collab| }}
+                      <a href="/labs/{{ collab.slug }}"> {{ collab.name }}</a>,
+                    {{/each}}
+                  </em>
+                </p>
+              </li>
+            </ul>
+          {{/if}}
           <ul class="list-inline">
             <li>
               <p>
                 <span><i class="material-icons">local_offer</i></span>
                 <em>
                   {{#each model.tags as |tag| }}
-                    <a class="btn btn-tag" href="index.html">{{ tag }}</a>
+                    <a class="btn btn-tag" href="index.html">{{ tag.name }}</a>
                   {{/each}}
                 </em>
               </p>
@@ -85,8 +87,8 @@
     <hr>
     <article class="info">
       <div class="row">
-        <div class="col-md-7">
-          {{#if model.scope }}
+        {{#if model.scope }}
+          <div class="col-md-7">
             <h3>About</h3>
             <div class="description">
               <p>{{ markdown-to-html model.scope }}</p>
@@ -95,21 +97,21 @@
                 <p>{{ markdown-to-html model.faq }}</p>
               {{/if}}
             </div>
-          {{/if}}
-        </div>
+          </div>
+        {{/if}}
         <div class="col-md-5 info">
           <span class="pull-right">
             <ul class="list-inline">
               <li>
-                <button type="button" class="special" href="#steps"><h1>3</h1><p>Steps</p>
+                <button type="button" class="special" href="#steps"><h1>{{ model.steps_count }}</h1><p>Steps</p>
                 </button>
               </li>
               <li>
-                <button type="button" class="special" href="#users"><h1>178</h1><p>Users</p>
+                <button type="button" class="special" href="#users"><h1>{{ model.users_count }}</h1><p>Users</p>
                 </button>
               </li>
               <li>
-                <button type="button" class="special" href="#machines"><h1>21</h1><p>Machines</p>
+                <button type="button" class="special" href="#machines"><h1>{{ model.machines_count }}</h1><p>Machines</p>
                 </button>
               </li>
             </ul>
