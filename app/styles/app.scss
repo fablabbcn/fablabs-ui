@@ -1256,9 +1256,10 @@ a {
 
 .btn-action {
 	background-color: transparent;
-	border: 2px solid $light-grey;
-	color: $light-grey;
+	border: 2px solid $green;
+	color: $green;
 	margin-top:0;
+	padding-bottom:0px;
 	&:hover { background-color: $green; color: white; border-color: $green};
 
 }
@@ -1293,11 +1294,10 @@ a {
 
 
 	&:hover {background-color:white; color: $green; border: none; margin: 2px};
-
+	}
 
 	span{
 
-	}
 		em{
 			text-transform: none;
 			font-style: normal;
@@ -1323,11 +1323,6 @@ a {
 		height: 26px;
 	}
 
-
-
-	span{
-
-	}
 	em{
 		text-transform: none;
 		font-style: normal;
@@ -1343,7 +1338,7 @@ a {
 	}
 }
 
-.disabled{
+.disabled {
 	color: $grey;
   text-transform:capitalize !important;
 }
@@ -1377,7 +1372,8 @@ a {
 	  word-wrap: normal;
 	  white-space: nowrap;
 	  direction: ltr;
-	  &:hover {color:white; background-color: $green;}
+	  &:hover {color:white; background-color: $green;
+	}
 
 	  /* Support for all WebKit browsers. */
 		-webkit-font-smoothing: antialiased;
@@ -1389,5 +1385,5 @@ a {
 
 	  /* Support for IE. */
 	  	font-feature-settings: 'liga';
-	}
+}
 }
