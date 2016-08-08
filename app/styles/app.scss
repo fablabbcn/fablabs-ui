@@ -372,10 +372,17 @@ main {
 				font-size: 1.7rem !important;
 				line-height: 28px;
 			}
+
+			li{
+				text-align:left;
+			}
 		}
 		.disabled {
 			p{
 				padding-top: 0em;
+			}
+			li {
+				text-align:left;
 			}
 		}
 
@@ -961,6 +968,10 @@ main {
 			li{
 				padding-right: 5%;
 			}
+
+			a {
+				&:hover {text-decoration:none;}
+			}
 		}
 		&:hover {
 			h5, p{
@@ -1281,7 +1292,7 @@ a {
 	margin-bottom: 0px;
 
 
-	&:hover {background-color:white; color: $green; border: none; margin: 0px};
+	&:hover {background-color:white; color: $green; border: none; margin: 2px};
 
 
 	span{
