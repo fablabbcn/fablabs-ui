@@ -32,6 +32,7 @@ export default Model.extend({
     steps:              attr(),
     owner:              attr(),
     users:              attr(),
+    tags:               attr(),
 
     labs_count: Ember.computed('collaborations', function() {
       return `${this.get('collaborations').length}`;
@@ -41,4 +42,7 @@ export default Model.extend({
       return `${this.get('users').length}`;
     }),
 
+    steps_count: Ember.computed('steps', function() {
+      return `${this.get('steps').length}`;
+    }),
 });
