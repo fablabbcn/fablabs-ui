@@ -36,7 +36,7 @@
                 <span><i class="material-icons">local_offer</i></span>
                 <em>
                   {{#each model.tags as |tag| }}
-                    {{#if tag }}
+                    {{#if tag.name }}
                       <a class="btn btn-tag" href="index.html">{{ tag.name }}</a>
                     {{else}}
                       <a class="btn btn-tag" href="index.html">Untagged</a>
