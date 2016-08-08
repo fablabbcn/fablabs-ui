@@ -372,10 +372,17 @@ main {
 				font-size: 1.7rem !important;
 				line-height: 28px;
 			}
+
+			li{
+				text-align:left;
+			}
 		}
 		.disabled {
 			p{
 				padding-top: 0em;
+			}
+			li {
+				text-align:left;
 			}
 		}
 
