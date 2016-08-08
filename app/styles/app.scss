@@ -388,6 +388,7 @@ main {
 
 
 
+
 	.info{
 		margin-top: 0em;
 		.col-md-5 {
@@ -451,6 +452,37 @@ main {
 		font-size: 12px !important;
 		letter-spacing: 1px;
 	}
+}
+
+
+.share {
+	display:block;
+}
+
+.counters {
+	display: block;
+	margin-top:4em !important;
+
+
+		li {
+
+			.special{
+				padding: 2% 0%;
+				width:122px;
+				text-align: center;
+				background-color: $alt-bg;
+				color: $green;
+				border: none;
+				padding-top:2em;
+
+				&:hover {background-color: $green; color: white};
+					&:hover {color: white; text-decoration: none;};
+					p{
+					text-transform: uppercase;
+					}
+
+			}
+		}
 }
 
 .status{
@@ -928,19 +960,13 @@ main {
 	padding-top: 4em;
 	padding-bottom: 6em;
 
-	button {
+	a {
 		float: left;
 
 		.profile{
 			display: block;
 			float: left;
 			padding-right: 2em;
-			.worker {
-				border: 2px solid $green;
-			}
-			.student {
-				border: 2px solid $orange;
-			}
 
 		}
 		.content {
@@ -950,29 +976,26 @@ main {
 				padding-top: 5px;
 				line-height: 20px;
 				color: $dark;
+				margin-bottom:0.8em;
 			}
 			p{
 				color: $green;
 				padding: 0;
 				margin: 0;
 			}
-			h5 {
-				margin: 0;
-			}
+		
 
-			a{
-				text-decoration: none;
-				color: $grey;
-					span {padding: 5px;}
-				&:hover {color:$green;};
-			}
+		
 			li{
 				padding-right: 5%;
-			}
-
-			a {
-				&:hover {text-decoration:none;}
-			}
+				a {
+					text-decoration: none;
+					color: $grey;
+						span {padding: 5px;}
+				&:hover {text-decoration:none; color:$green;}
+				}
+			}	
+			
 		}
 		&:hover {
 			h5, p{
@@ -1286,16 +1309,7 @@ a {
 	background-color: $alt-bg;
 }
 
-.activity{
-  border: 2px solid $alt-bg;
-  padding: 2em;
-  margin-top: 0em;
-  margin-bottom: 2em;
-  background-color: $alt-bg;
-  button {
-    color: #000 !important;
-  }
-}
+
 
 .btn-interaction{
 	text-transform: none;
