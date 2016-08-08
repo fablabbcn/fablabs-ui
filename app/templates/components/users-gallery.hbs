@@ -12,18 +12,20 @@
     </div>
     <div class="row">
       {{#each users as |user|}}
-      <div class="col-sm-4">
-        <button type="button" href="profile.html">
-          <div class="profile">
-            <img src={{ user.avatar }} class="img-rounded worker"/>
+        {{#if user}}
+          <div class="col-sm-4">
+            <button type="button" href="profile.html">
+              <div class="profile">
+                <img src={{ user.avatar }} class="img-rounded worker"/>
+              </div>
+              <div class="content">
+                <h5>{{ user.full_name }}</h5>
+                <div class="disabled">{{ user.job_title }}</div>
+                <a href="#profile">View Profile</a>
+              </div>
+            </button>
           </div>
-          <div class="content">
-            <h5>{{ user.full_name }}</h5>
-            <div class="disabled">{{ user.job_title }}</div>
-            <a href="#profile">View Profile</a>
-          </div>
-        </button>
-      </div>
+        {{/if}}
       {{/each}}
     </div>
     <hr>
