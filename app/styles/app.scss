@@ -1286,6 +1286,17 @@ a {
 	background-color: $alt-bg;
 }
 
+.activity{
+  border: 2px solid $alt-bg;
+  padding: 2em;
+  margin-top: 0em;
+  margin-bottom: 2em;
+  background-color: $alt-bg;
+  button {
+    color: #000 !important;
+  }
+}
+
 .btn-interaction{
 	text-transform: none;
 	background-color: transparent;
