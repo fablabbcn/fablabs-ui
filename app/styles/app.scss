@@ -961,6 +961,10 @@ main {
 			li{
 				padding-right: 5%;
 			}
+
+			a {
+				&:hover {text-decoration:none;}
+			}
 		}
 		&:hover {
 			h5, p{
@@ -1281,7 +1285,7 @@ a {
 	margin-bottom: 0px;
 
 
-	&:hover {background-color:white; color: $green; border: none; margin: 0px};
+	&:hover {background-color:white; color: $green; border: none; margin: 2px};
 
 
 	span{
