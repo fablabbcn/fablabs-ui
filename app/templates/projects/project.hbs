@@ -64,7 +64,7 @@
              </li>
             </ul>
           </div>
-          
+
           <ul class="list-inline pull-right">
             <h6>Share this project:</h6>
             <li>
@@ -94,25 +94,44 @@
               {{/if}}
             </div>
           </div>
+          <div class="col-md-5 info">
+            <span class="pull-right">
+              <ul class="list-inline">
+                <li>
+                  <button type="button" class="special" href="#steps"><h1>{{ model.steps_count }}</h1><p>Steps</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="special" href="#users"><h1>{{ model.users_count }}</h1><p>Users</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="special" href="#machines"><h1>{{ model.machines_count }}</h1><p>Machines</p>
+                  </button>
+                </li>
+              </ul>
+            </span>
+          </div>
+        {{else}}
+          <div class="col-md-12 info">
+            <span class="pull-left">
+              <ul class="list-inline">
+                <li>
+                  <button type="button" class="special" href="#steps"><h1>{{ model.steps_count }}</h1><p>Steps</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="special" href="#users"><h1>{{ model.users_count }}</h1><p>Users</p>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="special" href="#machines"><h1>{{ model.machines_count }}</h1><p>Machines</p>
+                  </button>
+                </li>
+              </ul>
+            </span>
+          </div>
         {{/if}}
-        <div class="col-md-5 info">
-          <span class="pull-right">
-            <ul class="list-inline">
-              <li>
-                <button type="button" class="special" href="#steps"><h1>{{ model.steps_count }}</h1><p>Steps</p>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="special" href="#users"><h1>{{ model.users_count }}</h1><p>Users</p>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="special" href="#machines"><h1>{{ model.machines_count }}</h1><p>Machines</p>
-                </button>
-              </li>
-            </ul>
-          </span>
-        </div>
       </div>
     </article>
   </div>
