@@ -362,7 +362,7 @@ main {
 
 			li{
 				margin-bottom: 0em;
-				text-align: right;
+				text-align: left;
 				margin:0;
 				padding:0;
 			}
@@ -1235,7 +1235,7 @@ a {
 					font-style: normal;
 					letter-spacing: 1;
 					vertical-align: middle;
-					padding-bottom: 7px;
+					padding-bottom: 0px;
 					padding-right: 8px;
 				}
 }
@@ -1273,6 +1273,7 @@ a {
 	margin-right: 0.5em;
 	padding-right: 0.8em;
 	padding-left: 0.8em;
+	margin-top:0.3em;
 }
 
 
@@ -1291,6 +1292,8 @@ a {
 	border: 2px solid transparent;
 	padding-right: 0;
 	margin-bottom: 0px;
+	padding-top:9px;
+	padding-bottom:7px;
 
 
 	&:hover {background-color:white; color: $green; border: none; margin: 2px};
