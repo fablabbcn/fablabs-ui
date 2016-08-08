@@ -1,12 +1,14 @@
 <article class="gallery">
-  {{#each documents as |document| }}
-    <div class="col-lg-3">
-      <div class="hovereffect img-box">
-        <img class="img-responsive" src={{ document }} alt="">
-        <div class="overlay">
-          <a class="info" href="#"><i class="material-icons">camera</i>View Photos</a>
+  <div class="row row-centered">
+    {{#each documents as |document| }}
+      <div class="col-lg-3">
+        <div class="hovereffect img-box">
+          <img class="img-responsive" src={{ document }} alt="">
+          <div class="overlay">
+            <a class="info" href="#"><i class="material-icons">camera</i>View Photos</a>
+          </div>
         </div>
       </div>
-    </div>
-  {{/each}}
+    {{/each}}
+  </div>
 </article>
