@@ -6,6 +6,7 @@
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
-    "showdown": "^1.4.2"
+    "showdown": "^1.4.2",
+    "cookieconsent": "cookieconsent2#^3.0.2"
   }
 }
