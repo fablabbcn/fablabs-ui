@@ -1,3 +1,5 @@
+# DEPRECATED: Fablabs.io is now developed only here: https://github.com/fablabbcn/fablabs.io
+
 # fablabs-ui
 Ember Frontend Fablabs.io
 
